@@ -11,11 +11,7 @@ class Solution:
                     word_new = re.sub(pattern,'', word)
                     word_dict.update({int(word[i]):word_new})
         word_dict = dict(sorted(word_dict.items()))
-        # print(word_dict)
-        for key, value in word_dict.items():
-            output = output + ' ' + value
-            output = output.strip()
-
+        output = ' '.join(word_dict.values()).strip()
         return output
 
 
